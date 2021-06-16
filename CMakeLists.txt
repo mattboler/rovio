@@ -23,7 +23,7 @@ endif()
 find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
 
-find_package(OpenCV REQUIRED COMPONENTS core highgui imgproc features2d)
+find_package(OpenCV 4.5.2 REQUIRED COMPONENTS core highgui imgproc features2d) # drop down to 4.0.0 to use OpenCV that ships with 20.04
 
 if(MAKE_SCENE)
 	message(STATUS "Building ROVIO with openGL Scene Visualization")
